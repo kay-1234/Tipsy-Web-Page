@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- カクテルグラス -->
+  <g transform="translate(12, 8)">
+    <!-- グラスのボウル部分 -->
+    <path d="M4 8 L20 8 L18 18 L6 18 Z" fill="#FFFFFF" stroke="#8B4513" stroke-width="0.8"/>
+    
+    <!-- ドリンク -->
+    <path d="M5 9 L19 9 L17.5 17 L6.5 17 Z" fill="#8B1538"/>
+    
+    <!-- ステム（脚） -->
+    <rect x="11" y="18" width="2" height="8" fill="#8B4513"/>
+    
+    <!-- ベース -->
+    <ellipse cx="12" cy="27" rx="6" ry="1.5" fill="#8B4513"/>
+    
+    <!-- グラスのハイライト -->
+    <path d="M6 10 L8 10 L7.5 14 L6.5 14 Z" fill="#FFFFFF" opacity="0.6"/>
+    
+    <!-- オリーブ -->
+    <circle cx="10" cy="12" r="1.5" fill="#8B4513"/>
+    <circle cx="14" cy="14" r="1.2" fill="#8B4513"/>
+  </g>
+
+</svg>
