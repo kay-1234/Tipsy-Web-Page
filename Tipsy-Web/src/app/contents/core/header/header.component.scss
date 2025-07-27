@@ -1,0 +1,131 @@
+// Variables
+:host {
+  --accent-gold: #d4af37;
+  --accent-brown: #8b6914;
+  --text-light: #f5f5dc;
+  --text-dark: #654321;
+  --header-bg: rgba(20, 15, 10, 0.95);
+}
+
+// Mixins
+@mixin transition-smooth {
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+// Header with modern backdrop-filter
+.header {
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid var(--accent-brown);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+.logo {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+  color: var(--text-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Times New Roman", serif;
+
+  &-icon {
+    width: 40px;
+    height: 30px;
+    border: 2px solid var(--accent-brown);
+    background: var(--text-light);
+    position: relative;
+    border-radius: 3px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 12px;
+      border: 1.5px solid var(--text-dark);
+      border-radius: 0 0 4px 4px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 8px;
+      border: 1.5px solid var(--text-dark);
+      border-radius: 2px 2px 0 0;
+      border-bottom: none;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+
+  a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: "Times New Roman", serif;
+    @include transition-smooth;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--accent-gold);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gold);
+      @include transition-smooth;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    // Focus styles for accessibility
+    &:focus-visible {
+      outline: 2px solid var(--accent-gold);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}

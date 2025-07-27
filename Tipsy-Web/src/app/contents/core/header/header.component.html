@@ -1,0 +1,17 @@
+<header class="header">
+  <nav class="container">
+    <a href="#" class="logo">
+      <div class="logo-icon"></div>
+      Tipsy
+    </a>
+    <ul class="nav-links">
+      @for (link of navLinks(); track link.href) {
+        <li>
+          <a (click)="onNavClick($event, link.href)" [href]="link.href">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</header>

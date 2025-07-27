@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global styles */
+
+/* Default styles for desktop */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  header,
+  footer {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  header {
+    top: 0;
+    z-index: 1001; /* Higher than other elements */
+    overflow: visible; /* Ensure dropdowns or menus are not clipped */
+  }
+
+  footer {
+    bottom: 0;
+  }
+
+  body {
+    padding-top: 60px; /* Adjust for fixed header */
+    padding-bottom: 40px; /* Adjust for fixed footer */
+  }
+
+  /* Extend header and footer to full width */
+  header,
+  footer {
+    left: 0;
+    right: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-bg);
+    position: absolute;
+    top: 60px; /* Below the fixed header */
+    left: 0;
+    right: 0;
+    z-index: 1002;
+  }
+}

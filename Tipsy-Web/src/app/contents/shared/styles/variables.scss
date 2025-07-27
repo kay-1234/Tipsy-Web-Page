@@ -1,0 +1,8 @@
+@mixin transition-smooth {
+  transition: all 0.3s ease;
+}
+$accent-gold: #d4af37;
+$accent-brown: #8b6914;
+$text-light: #f5f5dc;
+$text-dark: #654321;
+$header-bg: rgba(20, 15, 10, 0.95);

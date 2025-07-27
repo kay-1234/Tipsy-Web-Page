@@ -1,0 +1,22 @@
+// Variables
+:host {
+  --accent-brown: #8b6914;
+  --text-light: #f5f5dc;
+  --header-bg: rgba(20, 15, 10, 0.95);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+// Footer
+.footer {
+  background: var(--header-bg);
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 2px solid var(--accent-brown);
+  font-family: "Times New Roman", serif;
+  color: var(--text-light);
+}
